@@ -8,31 +8,34 @@ def test_count_characters():
     assert ex.count_characters(movie_title) == 17
 
 def test_first_three_letters():
-    assert ex.count_characters(movie_title) == "Bla"
+    assert ex.first_three_letters(movie_title) == "Bla"
 
 def test_last_three_letters():
+    assert ex.last_three_letters(movie_title) == "049"
+
+def test_split_words():
     assert ex.split_words(movie_title) == ["Blade", "runner", "2049"]
 
 def test_replace():
-    assert ex.replace([movie_title, "2049", "2051"]) == "Blade runner 2051"
+    assert ex.replace(movie_title, "2049", "2051") == "Blade runner 2051"
 
 def test_normalize_1():
-    assert ex.normalize([movie_title, 1]) == "blade runner 2049"
+    assert ex.normalize(movie_title, 1) == "blade runner 2049"
 
 def test_normalize_2():
-    assert ex.normalize([movie_title, 2]) == "BLADE RUNNER 2049"
+    assert ex.normalize(movie_title, 2) == "BLADE RUNNER 2049"
 
 def test_normalize_3():
-    assert ex.normalize([movie_title, 3]) == "Blade runner 2049"
+    assert ex.normalize(movie_title, 3] == "Blade runner 2049"
 
 def test_normalize_4():
-    assert ex.normalize([movie_title, 4]) == ValueError
+    assert ex.normalize[movie_title, 4) == ValueError
 
 def test_find_title_1(): 
-    assert ex.find_title([["Blade runner", "Star trek", "staR wars"], "Star"]) == ["Star trek", "staR wars"]
+    assert ex.find_title(["Blade runner", "Star trek", "staR wars"], "Star") == ["Star trek", "staR wars"]
 
 def test_find_title_2():
-    assert ex.find_title([["Blade runner", "Star trek", "staR wars"], "test"]) == []
+    assert ex.find_title(["Blade runner", "Star trek", "staR wars"], "test") == []
 
 def test_calculate_mean_1():
     assert ex.calculate_mean([8, 4, 10, 2]) == 6.0
