@@ -29,7 +29,7 @@ def test_normalize_3():
     assert ex.normalize(movie_title, 3) == "Blade runner 2049"
 
 def test_normalize_4():
-    assert ex.normalize[movie_title, 4) == ValueError
+    assert ex.normalize(movie_title, 4) == ValueError
 
 def test_find_title_1(): 
     assert ex.find_title(["Blade runner", "Star trek", "staR wars"], "Star") == ["Star trek", "staR wars"]
