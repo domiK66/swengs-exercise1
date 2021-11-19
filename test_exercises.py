@@ -29,11 +29,8 @@ def test_normalize_3():
     assert ex.normalize(movie_title, 3) == "Blade runner 2049"
 
 def test_normalize_4():
-    try:
+    with pytest.raises(ValueError, match='Invalid mode'):
         ex.normalize(movie_title, 4)
-        assert False
-    except ValueError("Invalid mode"):
-        assert True
 
 def test_find_title_1(): 
     assert ex.find_title(["Blade runner", "Star trek", "staR wars"], "Star") == ["Star trek", "staR wars"]
