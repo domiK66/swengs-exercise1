@@ -26,7 +26,7 @@ def test_normalize_2():
     assert ex.normalize(movie_title, 2) == "BLADE RUNNER 2049"
 
 def test_normalize_3():
-    assert ex.normalize(movie_title, 3] == "Blade runner 2049"
+    assert ex.normalize(movie_title, 3) == "Blade runner 2049"
 
 def test_normalize_4():
     assert ex.normalize[movie_title, 4) == ValueError
